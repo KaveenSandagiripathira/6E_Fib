@@ -62,9 +62,12 @@ public class Fib {
               ignore rounding issues.
      */
     public static double fib_Binet( int n) {
+		long start = System.nanoTime();
         double phi = (1 + Math.sqrt(5))/2 ;
 		double psi = -1/phi ;
 		double ans = (Math.pow(phi,n) - Math.pow(psi,n))/Math.sqrt(5);
+		long end = System.nanoTime();
+		System.out.println("Elapsed Time:" + end-start);
 		return ans;
     }
     /* Time complexity:
